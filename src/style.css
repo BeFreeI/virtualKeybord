@@ -4,8 +4,10 @@ textarea {
     width: 500px;
     height: 200px;
 }
-
 .keybord{
+    height: 300px;
+    width: 825px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(15, 50px);
     grid-template-rows: repeat(5, 50px);
