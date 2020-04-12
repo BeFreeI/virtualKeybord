@@ -53,6 +53,12 @@ class Keybord {
   initKeybord() {
     document.body.appendChild(this.textArea);
     document.body.appendChild(this.keybord);
+    document.body.appendChild(
+      document.createTextNode('writed on Linux(Manjaro)\t'),
+    );
+    document.body.appendChild(
+      document.createTextNode('For swich language, press ctrl + alt'),
+    );
     document.addEventListener('keydown', this.keyDown);
     document.addEventListener('keyup', this.keyUp);
     this.keybord.addEventListener('mousedown', this.mouseDown);
@@ -181,6 +187,11 @@ class Keybord {
       case 18:
         break;
       case 9:
+        this.textArea.value = this.insertChar('\t', pos);
+        this.textArea.selectionStart = pos + 1;
+        this.textArea.selectionEnd = pos + 1;
+        break;
+      case 91:
         break;
       case 32:
         this.textArea.value = this.insertChar(' ', pos);
